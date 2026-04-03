@@ -345,20 +345,38 @@ const App = () => {
             </h2>
             <div className="space-y-4">
               {[
-                { name: "Certified Phishing Prevention Specialist (CPPS)", issuer: "Security", date: "Active" },
+                { name: "Certified Phishing Prevention Specialist (CPPS)", issuer: "HackAndFix", date: "Active", link: "https://academy.hackandfix.com/student-public-account/1192/" },
                 { name: "Digital Forensics & Incident Investigation", issuer: "Forensics", date: "Active" },
-                { name: "Intro to Offensive Security with AI", issuer: "Security & AI", date: "Active" },
-                { name: "Intro to Critical Infrastructure Protection (ICIP)", issuer: "Infrastructure", date: "Active" },
-                { name: "Google Cloud Computing Foundations: Networking and Security", issuer: "Google Cloud", date: "Active" }
-              ].map(cert => (
-                <div key={cert.name} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 border border-slate-800 rounded bg-slate-950/50 gap-2">
-                  <div>
-                    <div className="text-sm font-bold line-clamp-2">{cert.name}</div>
-                    <div className="text-xs text-slate-500">{cert.issuer}</div>
-                  </div>
-                  <div className="text-xs text-emerald-500 font-mono whitespace-nowrap">[{cert.date}]</div>
-                </div>
-              ))}
+                { name: "Intro to Offensive Security with AI", issuer: "Red Team Leaders", date: "Active", link: "https://courses.redteamleaders.com/completion/9d65ac096d131ca1" },
+                { name: "Intro to Critical Infrastructure Protection (ICIP)", issuer: "OPSWAT", date: "Active", link: "https://learn.opswatacademy.com/certificate/8i94QC4jbw" },
+                { name: "Google Cloud Computing Foundations: Networking and Security", issuer: "Google", date: "Active", link: "https://www.skills.google/public_profiles/cb3bbbd3-6791-4ac1-ada5-5ba1d3107146/badges/20261236" },
+                { name: "Purple Team", issuer: "Red Team Leaders", date: "Active", link: "https://courses.redteamleaders.com/completion/9157335fac4cfc7b" },
+                { name: "Mastercard Job Simulation", issuer: "Forage", date: "Active", link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/mastercard/vcKAB5yYAgvemepGQ_Mastercard_P7gNmdFb5Td2fXg3P_1725277323392_completion_certificate.pdf" },
+                { name: "Offensive Development Introduction for Windows v1", issuer: "Red Team Leaders", date: "Active", link: "https://courses.redteamleaders.com/completion/4149f41b52c42e56" }
+              ].map((cert, index) => {
+                const CertWrapper = cert.link ? 'a' : 'div';
+                const wrapperProps = cert.link ? {
+                  href: cert.link,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  className: "flex flex-col sm:flex-row sm:items-center justify-between p-4 border border-slate-800 rounded bg-slate-950/50 gap-2 transition-colors hover:border-emerald-500/50 hover:bg-slate-900/80 cursor-pointer group"
+                } : {
+                  className: "flex flex-col sm:flex-row sm:items-center justify-between p-4 border border-slate-800 rounded bg-slate-950/50 gap-2"
+                };
+
+                return (
+                  <CertWrapper key={index} {...wrapperProps}>
+                    <div className="flex-1">
+                      <div className="text-sm font-bold line-clamp-2 flex items-center gap-2">
+                        {cert.name}
+                        {cert.link && <ExternalLink size={14} className="text-emerald-500/50 group-hover:text-emerald-500/100 transition-colors" />}
+                      </div>
+                      <div className="text-xs text-slate-500 mt-1">{cert.issuer}</div>
+                    </div>
+                    <div className="text-xs text-emerald-500 font-mono whitespace-nowrap">[{cert.date}]</div>
+                  </CertWrapper>
+                );
+              })}
             </div>
           </div>
 
