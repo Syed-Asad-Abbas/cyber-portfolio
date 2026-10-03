@@ -20,7 +20,7 @@ export const projects = [
     order: 1,
     status: 'Portfolio project',
     theme: 'stone',
-    githubUrl: '',
+    githubUrl: 'https://github.com/Syed-Asad-Abbas/Fashion-Store/tree/devloper',
     liveUrl: '',
     thumbnail: shot(
       'xiv-hero',
@@ -81,7 +81,7 @@ export const projects = [
     order: 2,
     status: 'Portfolio project',
     theme: 'lavender',
-    githubUrl: '',
+    githubUrl: 'https://github.com/Syed-Asad-Abbas/shopify-Home-Bundle-Builder/tree/devloper',
     liveUrl: '',
     thumbnail: shot(
       'configurator-hero',
@@ -142,7 +142,7 @@ export const projects = [
     order: 3,
     status: 'Feature showcase',
     theme: 'sand',
-    githubUrl: '',
+    githubUrl: 'https://github.com/Syed-Asad-Abbas/shopify-practice/tree/Testing-Dawn-Theme',
     liveUrl: '',
     thumbnail: shot(
       'lookbook-hero',
@@ -200,10 +200,10 @@ export const projects = [
     engineering: 'React dashboards, analysis APIs, and machine learning integration.',
     published: true,
     featured: false,
-    order: 4,
+    order: 5,
     status: 'Portfolio project',
     theme: 'ink',
-    githubUrl: '',
+    githubUrl: 'https://github.com/Syed-Asad-Abbas/Multimodal-Phishing-Detection-System',
     liveUrl: '',
     thumbnail: shot(
       'phishing-hero',
@@ -250,6 +250,91 @@ export const projects = [
       results: [
         'An integrated web interface for submitting and reviewing analysis.',
         'Connected extraction and classification services with user and admin views.',
+      ],
+    },
+  },
+  {
+    id: 'luminara',
+    slug: 'luminara',
+    title: 'Luminara',
+    category: 'Full-stack · AI commerce',
+    shortDescription: 'A more personal way to discover skincare.',
+    description:
+      'A skincare storefront demo combining product discovery, a guided preference quiz, and an AI shopping concierge with a connected cart interface.',
+    technologies: ['Next.js', 'Express', 'MongoDB Atlas', 'OpenAI APIs', 'RAG'],
+    role: 'Full-stack development & AI integration',
+    engineering: 'Semantic product search, conversational recommendations, and cart interactions.',
+    published: true,
+    featured: true,
+    order: 4,
+    status: 'Portfolio demo',
+    theme: 'sand',
+    githubUrl: 'https://github.com/Syed-Asad-Abbas/Luminara',
+    liveUrl: 'https://luminara1.vercel.app/',
+    thumbnail: shot(
+      'luminara-hero',
+      'Luminara skincare storefront homepage with its AI concierge launcher',
+      'The Luminara storefront introduction.',
+    ),
+    images: [
+      shot(
+        'luminara-collection',
+        'Luminara product collection with skincare bundles, cleansers and moisturizers',
+        'Product discovery through the collection.',
+      ),
+      shot(
+        'luminara-product',
+        'Luminara cleanser detail view with image gallery and cart actions',
+        'A closer look at product details.',
+      ),
+      shot(
+        'luminara-quiz',
+        'Luminara AI concierge presenting the first question of a preference quiz',
+        'A guided starting point for the conversation.',
+      ),
+      shot(
+        'luminara-concierge',
+        'Luminara AI concierge displaying a conversation and product recommendations',
+        'Conversational product discovery.',
+      ),
+      shot(
+        'luminara-cart',
+        'Luminara cart drawer with quantity controls and an order summary',
+        'A cart drawer alongside the storefront.',
+      ),
+      shot(
+        'luminara-checkout',
+        'Luminara demo checkout interface with order summary and shipping fields',
+        'The checkout interface in the portfolio demo.',
+      ),
+    ],
+    caseStudy: {
+      overview:
+        'Luminara is the skincare storefront for my RAG-powered e-commerce concierge project. The supplied screens show a product catalog, detailed product views, a guided quiz, chat recommendations, and cart and checkout interfaces.',
+      problem:
+        'Product discovery can begin with a shopper’s preferences rather than an exact product name. This project explores how a conversational interface can connect those preferences to a browsable catalog.',
+      objectives: [
+        'Pair an editorial storefront with conversational product discovery.',
+        'Use catalog retrieval to support relevant recommendations.',
+        'Keep recommended products connected to the cart experience.',
+      ],
+      implementation: [
+        {
+          title: 'Storefront and shopping flow',
+          text: 'A Next.js interface presents the catalog, product details, and shopping controls. The screenshot gallery follows the experience from browsing to the demo checkout interface.',
+        },
+        {
+          title: 'Retrieval and conversation',
+          text: 'An Express service connects MongoDB Atlas retrieval with LLM tool calling. The project documentation describes semantic search with a keyword fallback and product cards inside the conversation.',
+        },
+        {
+          title: 'Guided discovery',
+          text: 'The concierge includes a preference quiz and a conversational recommendation view, giving shoppers another entry point into the product catalog.',
+        },
+      ],
+      results: [
+        'A portfolio demo spanning storefront presentation and an AI-assisted discovery flow.',
+        'Product recommendations presented alongside cart interactions.',
       ],
     },
   },

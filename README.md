@@ -1,6 +1,6 @@
 # Asad Abbas — Developer Portfolio
 
-A content-driven React portfolio for Shopify and full-stack development. Includes a responsive homepage, four case studies, project filtering, screenshot galleries, two résumé downloads, and static HTML generated for every published page.
+A content-driven React portfolio for Shopify and full-stack development. Includes a responsive homepage, five case studies, project filtering, screenshot galleries, two résumé downloads, and static HTML generated for every published page.
 
 ## Run locally
 
@@ -63,8 +63,10 @@ Supported case-study fields: `overview`, `problem`, `objectives`, `implementatio
 - Case-study problem/objective wording is editorial framing of the described implementation. Review it before publishing.
 - Original assets remain untouched. Local optimized copies live under `public/images`; unchanged copies of both résumés live under `public/resume`.
 - `scripts/prepare-assets.py` records original asset mappings. It is a one-time local import script, requires Pillow and the supplied Windows source files, and is not needed to build or run the site.
-- Project-specific repositories, demos, performance metrics, and the final production domain were not supplied. No placeholder URLs or fabricated metrics are used.
-- RAG concierge, Luminara, and any additional projects can be added when their content is ready.
+- User-supplied repositories are connected for all five projects. The `devloper` branch spelling is preserved exactly for XIV and Product Configurator. Shoppable Lookbook uses its separate `shopify-practice` repository on the `Testing-Dawn-Theme` branch.
+- Luminara is the RAG-powered e-commerce concierge project. Its case study combines the supplied screenshots with the [project README](https://github.com/Syed-Asad-Abbas/Luminara). Its supplied demo URL returned HTTP 200 on 2026-10-04; this is not an end-to-end verification of the remote AI/backend or payments.
+- Shopify projects have no live demo links, as requested. Luminara's existing Vercel demo remains linked; this does not change the portfolio's Netlify hosting preference.
+- No performance metrics or final production domain have been supplied. No placeholder URLs or fabricated metrics are used.
 
 ## Verification
 
@@ -93,7 +95,7 @@ The script checks the homepage and all case studies at 320, 375, 430, 768, 1024,
 The site is not deployed yet. Before deployment:
 
 1. Set `profile.siteUrl` to the confirmed HTTPS origin, without a trailing slash. The build will then emit canonical URLs, absolute sharing-image URLs and `sitemap.xml`.
-2. Choose a static host and publish `dist/`.
+2. Use the selected Netlify account and publish `dist/`. The root `netlify.toml` already specifies `npm run build`, `dist`, and Node 22. No account has been linked or deployment performed. See [Netlify file-based configuration](https://docs.netlify.com/build/configure-builds/file-based-configuration/).
 3. Ensure `/projects/example` resolves the generated `/projects/example/index.html` and unknown routes serve `404.html` with HTTP 404. Avoid a blanket homepage rewrite that hides the generated project HTML from crawlers.
 4. Verify direct links, reloads, redirects, sharing previews and PDF downloads on the actual domain.
 

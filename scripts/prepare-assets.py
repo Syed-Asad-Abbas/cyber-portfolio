@@ -21,6 +21,13 @@ assets = {
     'phishing-dashboard': ('multimodal phising detection system/admin 1.png', 1600),
     'phishing-architecture': ('multimodal phising detection system/user 2.png', 1600),
     'portrait': ('Warm Professional Portrait.png', 800),
+    'luminara-hero': ('luminara/a1.png', 1600),
+    'luminara-collection': ('luminara/a2.png', 1600),
+    'luminara-quiz': ('luminara/a6.png', 1600),
+    'luminara-concierge': ('luminara/a7.png', 1600),
+    'luminara-cart': ('luminara/a8.png', 1600),
+    'luminara-product': ('luminara/a9.png', 1600),
+    'luminara-checkout': ('luminara/a10.png', 1600),
 }
 output = root / 'public/images'
 output.mkdir(parents=True, exist_ok=True)

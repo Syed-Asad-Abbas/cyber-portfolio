@@ -69,4 +69,39 @@ export const images = {
     width: 800,
     height: 800,
   },
+  'luminara-hero': {
+    src: '/images/luminara-hero.webp',
+    width: 1600,
+    height: 788,
+  },
+  'luminara-collection': {
+    src: '/images/luminara-collection.webp',
+    width: 1600,
+    height: 784,
+  },
+  'luminara-quiz': {
+    src: '/images/luminara-quiz.webp',
+    width: 1600,
+    height: 774,
+  },
+  'luminara-concierge': {
+    src: '/images/luminara-concierge.webp',
+    width: 1600,
+    height: 779,
+  },
+  'luminara-cart': {
+    src: '/images/luminara-cart.webp',
+    width: 1600,
+    height: 781,
+  },
+  'luminara-product': {
+    src: '/images/luminara-product.webp',
+    width: 1600,
+    height: 780,
+  },
+  'luminara-checkout': {
+    src: '/images/luminara-checkout.webp',
+    width: 1600,
+    height: 782,
+  },
 };

@@ -1,0 +1,8 @@
+# Build the generated pages as static files. No blanket SPA rewrite: preserve
+# project-specific HTML and let Netlify serve dist/404.html for unknown URLs.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"

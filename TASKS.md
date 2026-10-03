@@ -41,9 +41,20 @@ Legend: [ ] not started; [~] in progress; [x] complete.
 
 ## Later / outside this iteration
 
-- [ ] Confirm project-specific repository and demo URLs.
-- [ ] Confirm canonical production domain and hosting provider.
+- [x] Connect supplied repositories for XIV, Product Configurator, Luminara and Phishing Detection.
+- [x] Connect Shoppable Lookbook's separate `shopify-practice` repository on `Testing-Dawn-Theme`.
+- [x] Select Netlify as the portfolio hosting provider and prepare build configuration.
+- [ ] Confirm canonical production domain and target Netlify account/site.
 - [ ] Final editorial review of case-study content.
 - [ ] Production deployment, sitemap and host-specific redirect verification.
 - [ ] Optional contact form, additional projects and advanced animation.
 - [ ] Additional browser/device testing before public launch (current browser QA: Edge).
+
+## Luminara follow-up — 2026-10-04
+
+- [x] Review supplied screenshots and repository description.
+- [x] Import seven optimized screenshots (cover plus six gallery views).
+- [x] Add Luminara as a featured full-stack case study with repository and demo links.
+- [x] Keep Shopify projects code-only with no invented live URLs.
+- [x] Prepare Netlify build settings without deploying.
+- [x] Verify five-project routing, filters, screenshots and links (51 browser checks); save checkpoint `v0.1.1`.
