@@ -8,8 +8,10 @@ export const profile = {
   // Set the confirmed deployment origin here, without a trailing slash.
   siteUrl: '',
   headline: ['Thoughtful storefronts.', 'Solid engineering.'],
-  intro: 'I’m Asad, a developer turning ideas into custom Shopify storefronts and full-stack web experiences. Built with care, from the first interaction to the last API call.',
-  contactIntro: 'Have a storefront to build, a product to improve, or a role in mind? I’d love to hear about it.',
+  intro:
+    'I’m Asad, a developer turning ideas into custom Shopify storefronts and full-stack web experiences. Built with care, from the first interaction to the last API call.',
+  contactIntro:
+    'Have a storefront to build, a product to improve, or a role in mind? I’d love to hear about it.',
   about: {
     title: 'A developer who cares about the whole experience.',
     paragraphs: [

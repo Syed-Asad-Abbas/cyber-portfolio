@@ -6,5 +6,14 @@ import Experience from '../sections/Experience.jsx';
 import Contact from '../sections/Contact.jsx';
 
 export default function HomePage() {
-  return <><Hero /><SelectedProjects /><About /><Skills /><Experience /><Contact /></>;
+  return (
+    <>
+      <Hero />
+      <SelectedProjects />
+      <About />
+      <Skills />
+      <Experience />
+      <Contact />
+    </>
+  );
 }

@@ -6,5 +6,16 @@ import NotFoundPage from '../pages/NotFoundPage.jsx';
 import RouteEffects from './RouteEffects.jsx';
 
 export default function App() {
-  return <><RouteEffects /><Routes><Route element={<SiteLayout />}><Route index element={<HomePage />} /><Route path="projects/:slug" element={<ProjectPage />} /><Route path="*" element={<NotFoundPage />} /></Route></Routes></>;
+  return (
+    <>
+      <RouteEffects />
+      <Routes>
+        <Route element={<SiteLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="projects/:slug" element={<ProjectPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </>
+  );
 }

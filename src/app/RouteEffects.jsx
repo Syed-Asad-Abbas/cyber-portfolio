@@ -10,8 +10,17 @@ export default function RouteEffects() {
     updateMetadata(location.pathname);
     const frame = requestAnimationFrame(() => {
       if (location.hash) {
-        const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-        if (target) { target.scrollIntoView({ behavior: 'instant' }); target.focus({ preventScroll: true }); }
+        let id = location.hash.slice(1);
+        try {
+          id = decodeURIComponent(id);
+        } catch {
+          /* Malformed anchors simply have no target. */
+        }
+        const target = document.getElementById(id);
+        if (target) {
+          target.scrollIntoView({ behavior: 'instant' });
+          target.focus({ preventScroll: true });
+        }
       } else if (previous.current !== null) {
         document.getElementById('main')?.focus({ preventScroll: true });
         if (navigationType !== 'POP') window.scrollTo({ top: 0, behavior: 'instant' });
