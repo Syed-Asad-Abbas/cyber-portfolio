@@ -1,9 +1,10 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router';
 import App from './app/App.jsx';
 import './styles/global.css';
 
-createRoot(document.getElementById('root')).render(
-  <React.StrictMode><BrowserRouter><App /></BrowserRouter></React.StrictMode>,
-);
+const root = document.getElementById('root');
+const application = <React.StrictMode><BrowserRouter><App /></BrowserRouter></React.StrictMode>;
+if (root.firstElementChild) hydrateRoot(root, application);
+else createRoot(root).render(application);

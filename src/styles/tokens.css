@@ -1,0 +1,13 @@
+:root {
+  --page: #f6f5f0;
+  --surface: #ecece4;
+  --ink: #252b26;
+  --muted: #646b62;
+  --green: #315b42;
+  --green-dark: #223d2e;
+  --line: #d8dcd1;
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: 'Helvetica Neue', Arial, sans-serif;
+  --mono: 'Courier New', monospace;
+  --section-space: clamp(4rem, 8vw, 7rem);
+}
