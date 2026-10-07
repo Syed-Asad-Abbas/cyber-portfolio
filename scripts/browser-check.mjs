@@ -59,6 +59,8 @@ try {
         await page.screenshot({ path: 'tmp/qa/case-study-desktop.png', fullPage: true });
       if ((width === 1440 || width === 375) && route === '/projects/luminara')
         await page.screenshot({ path: `tmp/qa/luminara-${width}.png`, fullPage: true });
+      if ((width === 1440 || width === 375) && route === '/projects/nueve-fashion')
+        await page.screenshot({ path: `tmp/qa/nueve-${width}.png`, fullPage: true });
       results.push(`${width}px ${route}: no overflow, one H1, no broken loaded images`);
     }
   }
@@ -82,16 +84,17 @@ try {
   results.push('Mobile menu opens, closes on Escape, returns focus, and navigates to sections');
 
   await page.getByRole('button', { name: 'Full-stack', exact: true }).click();
-  assert.equal(await page.locator('#projects article').count(), 2);
+  assert.equal(await page.locator('#projects article').count(), 3);
   assert.deepEqual(await page.locator('#projects article h3').allTextContents(), [
     'Luminara',
     'Multimodal Phishing Detection',
+    'Nueve Fashion',
   ]);
   await page.getByRole('button', { name: 'Shopify', exact: true }).click();
   assert.equal(await page.locator('#projects article').count(), 3);
   await page.getByRole('button', { name: /All work/ }).click();
-  assert.equal(await page.locator('#projects article').count(), 5);
-  results.push('Project filters show 2 full-stack, 3 Shopify, and 5 total projects');
+  assert.equal(await page.locator('#projects article').count(), 6);
+  results.push('Project filters show 3 full-stack, 3 Shopify, and 6 total projects');
 
   await page.getByRole('link', { name: 'Luminara', exact: true }).click();
   await page.waitForURL('**/projects/luminara');
@@ -108,6 +111,21 @@ try {
   await page.waitForURL('**/#projects');
   results.push('Luminara has six screenshots, the supplied repository and the demo link');
 
+  await page.getByRole('link', { name: 'Nueve Fashion', exact: true }).click();
+  await page.waitForURL('**/projects/nueve-fashion');
+  assert.equal(
+    await page.getByRole('link', { name: 'View source', exact: true }).getAttribute('href'),
+    'https://github.com/Syed-Asad-Abbas/Nueve-Fashion-react',
+  );
+  assert.equal(
+    await page.getByRole('link', { name: 'Visit live project', exact: true }).getAttribute('href'),
+    'https://nuevefashion.netlify.app/',
+  );
+  assert.equal(await page.getByRole('button', { name: /Enlarge screenshot:/ }).count(), 4);
+  results.push('Nueve has four screenshots, its source repository and Netlify live link');
+
+  await page.getByRole('link', { name: 'Back to selected work' }).click();
+  await page.waitForURL('**/#projects');
   await page.getByRole('link', { name: 'XIV Fashion Store', exact: true }).click();
   await page.waitForURL('**/projects/xiv-fashion-store');
   await page.waitForFunction(() => document.activeElement.id === 'main');

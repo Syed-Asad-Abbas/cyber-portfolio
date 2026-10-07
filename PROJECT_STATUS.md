@@ -1,7 +1,7 @@
 # Project status
 
-Date: 2026-10-04
-Current stage: all six initial stages plus the Luminara/project-link follow-up complete. Ready for review and Netlify account/domain selection.
+Date: 2026-10-07
+Current stage: all six initial stages plus the Luminara and Nueve follow-ups complete. Ready for review and Netlify account/domain selection.
 Approved scope: six stages through a first complete working version, followed by a clear handover for a possible model switch.
 
 ## Decisions
@@ -22,23 +22,24 @@ System node works. Default npm shim is broken; invoke `node "C:\Program Files\no
 - `d603746`: initial buildable scaffold and sourced content.
 - `b20e99c`: complete homepage, project pages and first successful prerender build.
 - `v0.1.0`: verified first working version, final fixes, readable formatting and handover documentation. Resolve this local Git tag for the final commit.
-- `v0.1.1`: Luminara case study, all five supplied project repositories, demo link, and Netlify build configuration. Resolve this local Git tag for the follow-up commit.
+- `v0.1.1`: Luminara case study, the first five supplied project repositories, demo link, and Netlify build configuration. Resolve this local Git tag for the follow-up commit.
+- `v0.1.2`: Nueve full e-commerce application case study, optimized screenshots, source repository, and Netlify demo link. Resolve this local Git tag for the Nueve follow-up commit.
 
 ## Completed scope
 
 1. Initial architecture: React/Vite/JavaScript, CSS Modules, local data, Git checkpoints.
-2. Navigation/routing: homepage anchors, mobile menu, five clean case-study routes, previous/next, not-found UI, keyboard focus management.
+2. Navigation/routing: homepage anchors, mobile menu, six clean case-study routes, previous/next, not-found UI, keyboard focus management.
 3. Design system: off-white/forest-green editorial style, responsive type, reusable elements, focus and reduced-motion styles.
 4. Homepage: hero with supplied warm portrait, filtered selected work, About, skills, experience, contact, footer.
-5. Project data: five sourced projects, conditional case-study sections/links, optimized screenshot copies, image enlargement, validated content. Both supplied resumes are downloadable.
+5. Project data: six sourced projects, conditional case-study sections/links, optimized screenshot copies, image enlargement, validated content. Both supplied resumes are downloadable.
 6. Working version: successful production/prerender build, tests, browser checks, README and this handover.
 
 ## Verification evidence
 
-- `npm run build`: passed; homepage, five case studies and 404 generated as HTML.
+- `npm run build`: passed; homepage, six case studies and 404 generated as HTML.
 - `npm test`: 4 passing regression tests for publication, ordering, navigation boundaries, empty/unknown projects and metadata.
-- `scripts/browser-check.mjs`: 51 passing checks in headless Microsoft Edge, including Luminara's gallery and supplied links.
-- Homepage and all five case studies checked at 320, 375, 430, 768, 1024, 1440, 1920px; no horizontal overflow, broken images or extra H1s.
+- `scripts/browser-check.mjs`: 59 passing checks in headless Microsoft Edge, including the Nueve and Luminara galleries and supplied links.
+- Homepage and all six case studies checked at 320, 375, 430, 768, 1024, 1440, 1920px; no horizontal overflow, broken images or extra H1s.
 - Mobile menu open/close/Escape, focus return, section navigation, project filters, screenshot dialog, browser back, deep-route refresh, contact/resume assets and reduced motion checked.
 - No browser console errors, runtime errors, or hydration warnings.
 - Desktop, mobile and case-study screenshots inspected. Raw report/screenshots: ignored `tmp/qa/`.
@@ -53,11 +54,12 @@ The machine's default npm shim is broken, so use the explicit installed npm CLI 
 ## Remaining decisions (do not fabricate)
 
 - No production deployment performed. Netlify is the selected portfolio host; `netlify.toml` specifies `npm run build`, `dist`, and Node 22. Confirm the target account/site and final domain before deployment. `profile.siteUrl` remains blank; absolute sharing URLs, canonical tags and sitemap activate when set.
-- All five project GitHub links are supplied and connected. XIV and Product Configurator use the exact `devloper` branch URLs. Lookbook has a separate repository: `shopify-practice/tree/Testing-Dawn-Theme`.
+- All six project GitHub links are supplied and connected. XIV and Product Configurator use the exact `devloper` branch URLs. Lookbook has a separate repository: `shopify-practice/tree/Testing-Dawn-Theme`.
 - Shopify projects are code-only showcases without live URLs. Luminara's supplied `https://luminara1.vercel.app/` demo returned HTTP 200 and the expected title on 2026-10-04. Its remote chat/backend and payments were not exercised.
 - Case-study editorial framing should be reviewed by Asad before publication. No invented commercial outcomes, measured improvements or client claims.
 - Shoppable Lookbook is described as a feature showcase of the gallery work listed with XIV.
 - Luminara represents the RAG e-commerce concierge and is now a featured full-stack case study at `/projects/luminara`. Seven supplied screenshots are optimized locally (cover plus six gallery views). The repository README supports the stack/retrieval description. No commercial outcomes or live payment-processing claims are made.
+- Nueve is a featured full-stack-ready e-commerce application case study at `/projects/nueve-fashion`. Its React repository and Netlify demo are linked, with five locally optimized screenshots. The deployed prototype uses Local Storage; production backend services are described as integration-ready rather than already connected.
 - Current browser QA covers Edge, not physical devices or Safari. Production-host redirects and real HTTP 404 status are not verified by Vite preview.
 
 ## Handover instruction

@@ -58,3 +58,12 @@ Legend: [ ] not started; [~] in progress; [x] complete.
 - [x] Keep Shopify projects code-only with no invented live URLs.
 - [x] Prepare Netlify build settings without deploying.
 - [x] Verify five-project routing, filters, screenshots and links (51 browser checks); save checkpoint `v0.1.1`.
+
+## Nueve follow-up — 2026-10-07
+
+- [x] Review the deployed storefront and its React repository.
+- [x] Import five optimized storefront screenshots (cover plus four gallery views).
+- [x] Add Nueve as a featured full-stack-ready e-commerce case study.
+- [x] Document catalog, product, cart, promotion, checkout, profile and order flows.
+- [x] Connect the source repository and Netlify live project.
+- [x] Verify six-project routing, filters, screenshots and links (59 browser checks); save checkpoint `v0.1.2`.

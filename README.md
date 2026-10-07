@@ -1,6 +1,6 @@
 # Asad Abbas — Developer Portfolio
 
-A content-driven React portfolio for Shopify and full-stack development. Includes a responsive homepage, five case studies, project filtering, screenshot galleries, two résumé downloads, and static HTML generated for every published page.
+A content-driven React portfolio for Shopify and full-stack development. Includes a responsive homepage, six case studies, project filtering, screenshot galleries, two résumé downloads, and static HTML generated for every published page.
 
 ## Run locally
 
@@ -63,8 +63,9 @@ Supported case-study fields: `overview`, `problem`, `objectives`, `implementatio
 - Case-study problem/objective wording is editorial framing of the described implementation. Review it before publishing.
 - Original assets remain untouched. Local optimized copies live under `public/images`; unchanged copies of both résumés live under `public/resume`.
 - `scripts/prepare-assets.py` records original asset mappings. It is a one-time local import script, requires Pillow and the supplied Windows source files, and is not needed to build or run the site.
-- User-supplied repositories are connected for all five projects. The `devloper` branch spelling is preserved exactly for XIV and Product Configurator. Shoppable Lookbook uses its separate `shopify-practice` repository on the `Testing-Dawn-Theme` branch.
+- User-supplied repositories are connected for all six projects. The `devloper` branch spelling is preserved exactly for XIV and Product Configurator. Shoppable Lookbook uses its separate `shopify-practice` repository on the `Testing-Dawn-Theme` branch.
 - Luminara is the RAG-powered e-commerce concierge project. Its case study combines the supplied screenshots with the [project README](https://github.com/Syed-Asad-Abbas/Luminara). Its supplied demo URL returned HTTP 200 on 2026-10-04; this is not an end-to-end verification of the remote AI/backend or payments.
+- Nueve is presented as a full-stack-ready e-commerce application prototype. Its current React deployment uses Local Storage for demo persistence; production authentication, inventory, payment, shipping and email services are not connected.
 - Shopify projects have no live demo links, as requested. Luminara's existing Vercel demo remains linked; this does not change the portfolio's Netlify hosting preference.
 - No performance metrics or final production domain have been supplied. No placeholder URLs or fabricated metrics are used.
 

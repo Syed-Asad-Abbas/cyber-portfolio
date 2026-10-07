@@ -338,4 +338,92 @@ export const projects = [
       ],
     },
   },
+  {
+    id: 'nueve',
+    slug: 'nueve-fashion',
+    title: 'Nueve Fashion',
+    category: 'Full-stack-ready · E-commerce',
+    shortDescription: 'A complete fashion journey, from discovery to demo checkout.',
+    description:
+      'A full e-commerce application prototype with responsive product discovery, variants, persistent cart and account flows, promotions, and a complete demo checkout experience.',
+    technologies: ['React', 'Vite', 'JavaScript', 'CSS', 'Local Storage'],
+    role: 'Full application development',
+    engineering:
+      'Catalog search and filtering, product variants, persistent commerce state, promotions, and checkout flows.',
+    published: true,
+    featured: true,
+    order: 6,
+    status: 'Full e-commerce application prototype',
+    theme: 'stone',
+    githubUrl: 'https://github.com/Syed-Asad-Abbas/Nueve-Fashion-react',
+    liveUrl: 'https://nuevefashion.netlify.app/',
+    thumbnail: shot(
+      'nueve-hero',
+      'Nueve fashion storefront with an editorial hero and collection call to action',
+      'The responsive Nueve storefront introduction.',
+    ),
+    images: [
+      shot(
+        'nueve-catalog',
+        'Nueve product catalog with audience, collection, price and sorting controls',
+        'Catalog discovery with filtering and sorting.',
+      ),
+      shot(
+        'nueve-product',
+        'Nueve product detail page with image gallery, size and color selectors',
+        'Product details and variant selection.',
+      ),
+      shot(
+        'nueve-cart',
+        'Nueve shopping bag with quantity controls, promotion messaging and discount entry',
+        'The persistent cart and promotion experience.',
+      ),
+      shot(
+        'nueve-mobile',
+        'Nueve fashion storefront displayed on a mobile screen',
+        'The storefront adapted for mobile shopping.',
+      ),
+    ],
+    caseStudy: {
+      overview:
+        'Nueve is a full e-commerce application prototype built as a standalone React storefront. It covers the customer journey from collection discovery and product configuration through a persistent shopping bag, demo checkout, profile, and order history.',
+      problem:
+        'A fashion storefront must make a large catalog easy to explore while keeping product choices, pricing, promotions, and checkout state consistent across the journey. Nueve brings those interactions together in one responsive application.',
+      objectives: [
+        'Create clear paths from editorial discovery to individual products.',
+        'Support product search, filters, sorting, variants, and quantities.',
+        'Preserve cart and customer state across browser sessions.',
+        'Demonstrate promotions, checkout, order confirmation, and account flows.',
+      ],
+      implementation: [
+        {
+          title: 'Catalog discovery',
+          text: 'Audience and collection navigation work alongside search, price ranges, and sorting so shoppers can move quickly from a broad catalog to relevant products.',
+        },
+        {
+          title: 'Product configuration',
+          text: 'Product pages combine an image gallery with size, color, and quantity controls, carrying each selected configuration into the shopping bag.',
+        },
+        {
+          title: 'Commerce state and promotions',
+          text: 'Browser persistence keeps carts, profiles, orders, newsletter signups, and contact submissions available between visits. Cart logic supports quantity changes, removals, NUEVE10 discounts, and an automatic Buy 3 Get 1 Free promotion.',
+        },
+        {
+          title: 'Checkout and customer journey',
+          text: 'The prototype includes checkout, confirmation, profile, and order-history screens, plus FAQ, shipping information, newsletter, contact, social links, and mobile navigation.',
+        },
+      ],
+      technicalDecisions: [
+        'Vite keeps the React development and production build lightweight.',
+        'Reusable application state connects catalog, cart, checkout, and account experiences.',
+        'Local Storage provides durable demo data without requiring credentials or hosted services.',
+        'The interface is structured so production APIs for authentication, inventory, payments, shipping, and email can replace browser persistence.',
+      ],
+      results: [
+        'A deployed, responsive storefront covering the complete demo purchase journey.',
+        'A searchable and filterable catalog with configurable product details.',
+        'Persistent cart, discounts, promotional pricing, checkout, and customer account demonstrations.',
+      ],
+    },
+  },
 ];

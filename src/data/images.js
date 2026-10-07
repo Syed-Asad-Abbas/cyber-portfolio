@@ -104,4 +104,29 @@ export const images = {
     width: 1600,
     height: 782,
   },
+  'nueve-hero': {
+    src: '/images/nueve-hero.webp',
+    width: 1440,
+    height: 1000,
+  },
+  'nueve-catalog': {
+    src: '/images/nueve-catalog.webp',
+    width: 1440,
+    height: 1000,
+  },
+  'nueve-product': {
+    src: '/images/nueve-product.webp',
+    width: 1440,
+    height: 1000,
+  },
+  'nueve-cart': {
+    src: '/images/nueve-cart.webp',
+    width: 1440,
+    height: 1000,
+  },
+  'nueve-mobile': {
+    src: '/images/nueve-mobile.webp',
+    width: 390,
+    height: 844,
+  },
 };
