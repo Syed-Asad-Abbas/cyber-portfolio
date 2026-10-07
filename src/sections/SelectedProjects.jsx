@@ -11,14 +11,17 @@ const filters = [
 ];
 export default function SelectedProjects() {
   const [filter, setFilter] = useState('all');
+  const [expanded, setExpanded] = useState(false);
   const projects = getPublishedProjects();
-  const shown = projects.filter(
+  const filteredProjects = projects.filter(
     (p) =>
       filter === 'all' ||
       (filter === 'shopify'
         ? p.category.toLowerCase().includes('shopify')
         : p.category.toLowerCase().includes('full-stack')),
   );
+  const canExpand = filter === 'all' && filteredProjects.length > 3;
+  const shown = canExpand && !expanded ? filteredProjects.slice(0, 3) : filteredProjects;
   return (
     <section
       id="projects"
@@ -50,14 +53,27 @@ export default function SelectedProjects() {
           ))}
         </div>
         <span className={styles.projectCount} role="status">
-          {shown.length} projects
+          {shown.length} of {filteredProjects.length} projects
         </span>
       </div>
-      <div className={styles.grid}>
+      <div className={styles.grid} id="project-grid">
         {shown.map((project) => (
           <ProjectPreview key={project.id} project={project} index={projects.indexOf(project)} />
         ))}
       </div>
+      {canExpand && (
+        <div className={styles.moreProjects}>
+          <button
+            type="button"
+            className="button button-secondary"
+            aria-controls="project-grid"
+            aria-expanded={expanded}
+            onClick={() => setExpanded((value) => !value)}
+          >
+            {expanded ? 'Show fewer projects' : 'More projects'}
+          </button>
+        </div>
+      )}
     </section>
   );
 }

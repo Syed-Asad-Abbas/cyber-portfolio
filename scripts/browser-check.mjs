@@ -68,6 +68,17 @@ try {
   await page.setViewportSize({ width: 1440, height: 960 });
   await page.goto(origin, { waitUntil: 'networkidle' });
   const projectCards = page.locator('#projects article');
+  assert.equal(await projectCards.count(), 3);
+  const moreProjects = page.getByRole('button', { name: 'More projects', exact: true });
+  assert.equal(await moreProjects.getAttribute('aria-expanded'), 'false');
+  await moreProjects.click();
+  assert.equal(await projectCards.count(), 6);
+  assert.equal(
+    await page
+      .getByRole('button', { name: 'Show fewer projects', exact: true })
+      .getAttribute('aria-expanded'),
+    'true',
+  );
   assert.deepEqual(await projectCards.locator('h3').allTextContents(), [
     'XIV Fashion Store',
     'Luminara',
@@ -87,7 +98,11 @@ try {
     lastCard.locator('h3').boundingBox(),
   ]);
   assert.ok(lastBody.x < lastVisual.x, 'Project 6 text sits to the left of its visual');
-  results.push('Projects follow the requested order, paired rows, and inverted final layout');
+  await page.getByRole('button', { name: 'Show fewer projects', exact: true }).click();
+  assert.equal(await projectCards.count(), 3);
+  results.push(
+    'Three projects appear by default; the accessible control reveals and collapses the ordered project layout',
+  );
 
   await page.setViewportSize({ width: 375, height: 812 });
   await page.goto(origin, { waitUntil: 'networkidle' });
@@ -117,8 +132,10 @@ try {
   await page.getByRole('button', { name: 'Shopify', exact: true }).click();
   assert.equal(await page.locator('#projects article').count(), 3);
   await page.getByRole('button', { name: /All work/ }).click();
+  assert.equal(await page.locator('#projects article').count(), 3);
+  await page.getByRole('button', { name: 'More projects', exact: true }).click();
   assert.equal(await page.locator('#projects article').count(), 6);
-  results.push('Project filters show 3 full-stack, 3 Shopify, and 6 total projects');
+  results.push('Project filters show 3 full-stack, 3 Shopify, and all 6 after disclosure');
 
   await page.getByRole('link', { name: 'Luminara', exact: true }).click();
   await page.waitForURL('**/projects/luminara');

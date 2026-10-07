@@ -33,6 +33,14 @@
   color: var(--muted);
   white-space: nowrap;
 }
+.moreProjects {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.moreProjects button {
+  min-width: 11rem;
+}
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

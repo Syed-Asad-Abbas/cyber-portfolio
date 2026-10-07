@@ -74,3 +74,9 @@ Legend: [ ] not started; [~] in progress; [x] complete.
 - [x] Present projects two–three and four–five as paired cards.
 - [x] Invert the sixth project with copy on the left and artwork on the right.
 - [x] Verify responsive ordering and layout (60 browser checks); save checkpoint `v0.1.3`.
+
+## Project disclosure follow-up — 2026-10-07
+
+- [x] Show the first three selected projects on initial load.
+- [x] Add an accessible control that reveals or collapses the remaining projects.
+- [x] Verify the disclosure with project filters and responsive layouts (60 browser checks); save checkpoint `v0.1.4`.

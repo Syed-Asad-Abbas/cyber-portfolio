@@ -1,7 +1,7 @@
 # Project status
 
 Date: 2026-10-07
-Current stage: all six initial stages plus project content and selected-work layout follow-ups complete. Ready for review and Netlify account/domain selection.
+Current stage: all six initial stages plus project content, layout and disclosure follow-ups complete. Ready for review and Netlify account/domain selection.
 Approved scope: six stages through a first complete working version, followed by a clear handover for a possible model switch.
 
 ## Decisions
@@ -25,6 +25,7 @@ System node works. Default npm shim is broken; invoke `node "C:\Program Files\no
 - `v0.1.1`: Luminara case study, the first five supplied project repositories, demo link, and Netlify build configuration. Resolve this local Git tag for the follow-up commit.
 - `v0.1.2`: Nueve full e-commerce application case study, optimized screenshots, source repository, and Netlify demo link. Resolve this local Git tag for the Nueve follow-up commit.
 - `v0.1.3`: selected-work reorder with paired projects two–three and four–five, plus an inverted final project. Resolve this local Git tag for the layout follow-up commit.
+- `v0.1.4`: first-three project view with an accessible control for revealing the remaining work. Resolve this local Git tag for the disclosure follow-up commit.
 
 ## Completed scope
 
@@ -62,6 +63,7 @@ The machine's default npm shim is broken, so use the explicit installed npm CLI 
 - Luminara represents the RAG e-commerce concierge and is a full-stack case study at `/projects/luminara`. Seven supplied screenshots are optimized locally (cover plus six gallery views). The repository README supports the stack/retrieval description. No commercial outcomes or live payment-processing claims are made.
 - Nueve is a full-stack-ready e-commerce application case study at `/projects/nueve-fashion`. Its React repository and Netlify demo are linked, with five locally optimized screenshots. The deployed prototype uses Local Storage; production backend services are described as integration-ready rather than already connected.
 - Homepage project order is XIV, Luminara, Nueve, Product Configurator, Shoppable Lookbook and Multimodal Phishing Detection. Projects two–three and four–five form paired rows; the final project places its copy before the visual on desktop.
+- The homepage initially shows the first three projects. A More projects button reveals the remaining work and can collapse the list again.
 - Current browser QA covers Edge, not physical devices or Safari. Production-host redirects and real HTTP 404 status are not verified by Vite preview.
 
 ## Handover instruction
