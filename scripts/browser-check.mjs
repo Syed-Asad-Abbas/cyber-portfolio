@@ -93,11 +93,17 @@ try {
   assert.ok(Math.abs(cardBoxes[0].y - cardBoxes[1].y) < 2, 'Projects 2 and 3 share a row');
   assert.ok(Math.abs(cardBoxes[2].y - cardBoxes[3].y) < 2, 'Projects 4 and 5 share a row');
   const lastCard = projectCards.nth(5);
-  const [lastVisual, lastBody] = await Promise.all([
+  const [firstVisual, lastVisual, lastBody] = await Promise.all([
+    projectCards.nth(0).locator('div').first().boundingBox(),
     lastCard.locator('div').first().boundingBox(),
     lastCard.locator('h3').boundingBox(),
   ]);
   assert.ok(lastBody.x < lastVisual.x, 'Project 6 text sits to the left of its visual');
+  assert.ok(
+    Math.abs(firstVisual.width - lastVisual.width) < 2,
+    'Project 6 visual matches the featured project width',
+  );
+  await page.screenshot({ path: 'tmp/qa/home-expanded-1440.png', fullPage: true });
   await page.getByRole('button', { name: 'Show fewer projects', exact: true }).click();
   assert.equal(await projectCards.count(), 3);
   results.push(

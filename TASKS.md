@@ -80,3 +80,9 @@ Legend: [ ] not started; [~] in progress; [x] complete.
 - [x] Show the first three selected projects on initial load.
 - [x] Add an accessible control that reveals or collapses the remaining projects.
 - [x] Verify the disclosure with project filters and responsive layouts (60 browser checks); save checkpoint `v0.1.4`.
+
+## Final-project feature layout — 2026-10-07
+
+- [x] Mirror the first featured layout for the sixth project.
+- [x] Keep the large visual on the right and fitted copy on the left.
+- [x] Verify matching visual dimensions and responsive behavior (60 browser checks); save checkpoint `v0.1.5`.

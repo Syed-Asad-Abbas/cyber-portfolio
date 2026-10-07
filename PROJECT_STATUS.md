@@ -26,6 +26,7 @@ System node works. Default npm shim is broken; invoke `node "C:\Program Files\no
 - `v0.1.2`: Nueve full e-commerce application case study, optimized screenshots, source repository, and Netlify demo link. Resolve this local Git tag for the Nueve follow-up commit.
 - `v0.1.3`: selected-work reorder with paired projects two–three and four–five, plus an inverted final project. Resolve this local Git tag for the layout follow-up commit.
 - `v0.1.4`: first-three project view with an accessible control for revealing the remaining work. Resolve this local Git tag for the disclosure follow-up commit.
+- `v0.1.5`: mirrored final-project feature layout with text on the left and a first-project-sized visual on the right. Resolve this local Git tag for the feature-layout follow-up commit.
 
 ## Completed scope
 
@@ -62,7 +63,7 @@ The machine's default npm shim is broken, so use the explicit installed npm CLI 
 - Shoppable Lookbook is described as a feature showcase of the gallery work listed with XIV.
 - Luminara represents the RAG e-commerce concierge and is a full-stack case study at `/projects/luminara`. Seven supplied screenshots are optimized locally (cover plus six gallery views). The repository README supports the stack/retrieval description. No commercial outcomes or live payment-processing claims are made.
 - Nueve is a full-stack-ready e-commerce application case study at `/projects/nueve-fashion`. Its React repository and Netlify demo are linked, with five locally optimized screenshots. The deployed prototype uses Local Storage; production backend services are described as integration-ready rather than already connected.
-- Homepage project order is XIV, Luminara, Nueve, Product Configurator, Shoppable Lookbook and Multimodal Phishing Detection. Projects two–three and four–five form paired rows; the final project places its copy before the visual on desktop.
+- Homepage project order is XIV, Luminara, Nueve, Product Configurator, Shoppable Lookbook and Multimodal Phishing Detection. Projects two–three and four–five form paired rows; the final project mirrors the first feature layout with fitted copy on the left and the same large visual width on the right.
 - The homepage initially shows the first three projects. A More projects button reveals the remaining work and can collapse the list again.
 - Current browser QA covers Edge, not physical devices or Safari. Production-host redirects and real HTTP 404 status are not verified by Vite preview.
 
