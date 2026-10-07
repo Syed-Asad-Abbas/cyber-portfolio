@@ -1,7 +1,7 @@
 # Project status
 
 Date: 2026-10-07
-Current stage: all six initial stages plus the Luminara and Nueve follow-ups complete. Ready for review and Netlify account/domain selection.
+Current stage: all six initial stages plus project content and selected-work layout follow-ups complete. Ready for review and Netlify account/domain selection.
 Approved scope: six stages through a first complete working version, followed by a clear handover for a possible model switch.
 
 ## Decisions
@@ -24,6 +24,7 @@ System node works. Default npm shim is broken; invoke `node "C:\Program Files\no
 - `v0.1.0`: verified first working version, final fixes, readable formatting and handover documentation. Resolve this local Git tag for the final commit.
 - `v0.1.1`: Luminara case study, the first five supplied project repositories, demo link, and Netlify build configuration. Resolve this local Git tag for the follow-up commit.
 - `v0.1.2`: Nueve full e-commerce application case study, optimized screenshots, source repository, and Netlify demo link. Resolve this local Git tag for the Nueve follow-up commit.
+- `v0.1.3`: selected-work reorder with paired projects two–three and four–five, plus an inverted final project. Resolve this local Git tag for the layout follow-up commit.
 
 ## Completed scope
 
@@ -38,7 +39,7 @@ System node works. Default npm shim is broken; invoke `node "C:\Program Files\no
 
 - `npm run build`: passed; homepage, six case studies and 404 generated as HTML.
 - `npm test`: 4 passing regression tests for publication, ordering, navigation boundaries, empty/unknown projects and metadata.
-- `scripts/browser-check.mjs`: 59 passing checks in headless Microsoft Edge, including the Nueve and Luminara galleries and supplied links.
+- `scripts/browser-check.mjs`: 60 passing checks in headless Microsoft Edge, including the requested project order, paired rows, inverted final layout, galleries and supplied links.
 - Homepage and all six case studies checked at 320, 375, 430, 768, 1024, 1440, 1920px; no horizontal overflow, broken images or extra H1s.
 - Mobile menu open/close/Escape, focus return, section navigation, project filters, screenshot dialog, browser back, deep-route refresh, contact/resume assets and reduced motion checked.
 - No browser console errors, runtime errors, or hydration warnings.
@@ -58,8 +59,9 @@ The machine's default npm shim is broken, so use the explicit installed npm CLI 
 - Shopify projects are code-only showcases without live URLs. Luminara's supplied `https://luminara1.vercel.app/` demo returned HTTP 200 and the expected title on 2026-10-04. Its remote chat/backend and payments were not exercised.
 - Case-study editorial framing should be reviewed by Asad before publication. No invented commercial outcomes, measured improvements or client claims.
 - Shoppable Lookbook is described as a feature showcase of the gallery work listed with XIV.
-- Luminara represents the RAG e-commerce concierge and is now a featured full-stack case study at `/projects/luminara`. Seven supplied screenshots are optimized locally (cover plus six gallery views). The repository README supports the stack/retrieval description. No commercial outcomes or live payment-processing claims are made.
-- Nueve is a featured full-stack-ready e-commerce application case study at `/projects/nueve-fashion`. Its React repository and Netlify demo are linked, with five locally optimized screenshots. The deployed prototype uses Local Storage; production backend services are described as integration-ready rather than already connected.
+- Luminara represents the RAG e-commerce concierge and is a full-stack case study at `/projects/luminara`. Seven supplied screenshots are optimized locally (cover plus six gallery views). The repository README supports the stack/retrieval description. No commercial outcomes or live payment-processing claims are made.
+- Nueve is a full-stack-ready e-commerce application case study at `/projects/nueve-fashion`. Its React repository and Netlify demo are linked, with five locally optimized screenshots. The deployed prototype uses Local Storage; production backend services are described as integration-ready rather than already connected.
+- Homepage project order is XIV, Luminara, Nueve, Product Configurator, Shoppable Lookbook and Multimodal Phishing Detection. Projects two–three and four–five form paired rows; the final project places its copy before the visual on desktop.
 - Current browser QA covers Edge, not physical devices or Safari. Production-host redirects and real HTTP 404 status are not verified by Vite preview.
 
 ## Handover instruction

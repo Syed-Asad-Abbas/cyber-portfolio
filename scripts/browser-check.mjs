@@ -65,6 +65,30 @@ try {
     }
   }
 
+  await page.setViewportSize({ width: 1440, height: 960 });
+  await page.goto(origin, { waitUntil: 'networkidle' });
+  const projectCards = page.locator('#projects article');
+  assert.deepEqual(await projectCards.locator('h3').allTextContents(), [
+    'XIV Fashion Store',
+    'Luminara',
+    'Nueve Fashion',
+    'Product Configurator',
+    'Shoppable Lookbook',
+    'Multimodal Phishing Detection',
+  ]);
+  const cardBoxes = await Promise.all(
+    [1, 2, 3, 4].map((index) => projectCards.nth(index).boundingBox()),
+  );
+  assert.ok(Math.abs(cardBoxes[0].y - cardBoxes[1].y) < 2, 'Projects 2 and 3 share a row');
+  assert.ok(Math.abs(cardBoxes[2].y - cardBoxes[3].y) < 2, 'Projects 4 and 5 share a row');
+  const lastCard = projectCards.nth(5);
+  const [lastVisual, lastBody] = await Promise.all([
+    lastCard.locator('div').first().boundingBox(),
+    lastCard.locator('h3').boundingBox(),
+  ]);
+  assert.ok(lastBody.x < lastVisual.x, 'Project 6 text sits to the left of its visual');
+  results.push('Projects follow the requested order, paired rows, and inverted final layout');
+
   await page.setViewportSize({ width: 375, height: 812 });
   await page.goto(origin, { waitUntil: 'networkidle' });
   const menu = page.locator('button[aria-controls="main-navigation"]');
@@ -87,8 +111,8 @@ try {
   assert.equal(await page.locator('#projects article').count(), 3);
   assert.deepEqual(await page.locator('#projects article h3').allTextContents(), [
     'Luminara',
-    'Multimodal Phishing Detection',
     'Nueve Fashion',
+    'Multimodal Phishing Detection',
   ]);
   await page.getByRole('button', { name: 'Shopify', exact: true }).click();
   assert.equal(await page.locator('#projects article').count(), 3);
@@ -148,7 +172,7 @@ try {
     .getByRole('navigation', { name: 'Project navigation' })
     .getByRole('link', { name: /NEXT PROJECT/ })
     .click();
-  await page.waitForURL('**/projects/shopify-product-configurator');
+  await page.waitForURL('**/projects/luminara');
   await page.goBack();
   await page.waitForURL('**/projects/xiv-fashion-store');
   await page.reload({ waitUntil: 'networkidle' });

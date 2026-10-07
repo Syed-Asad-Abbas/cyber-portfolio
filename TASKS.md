@@ -54,7 +54,7 @@ Legend: [ ] not started; [~] in progress; [x] complete.
 
 - [x] Review supplied screenshots and repository description.
 - [x] Import seven optimized screenshots (cover plus six gallery views).
-- [x] Add Luminara as a featured full-stack case study with repository and demo links.
+- [x] Add Luminara as a full-stack case study with repository and demo links.
 - [x] Keep Shopify projects code-only with no invented live URLs.
 - [x] Prepare Netlify build settings without deploying.
 - [x] Verify five-project routing, filters, screenshots and links (51 browser checks); save checkpoint `v0.1.1`.
@@ -63,7 +63,14 @@ Legend: [ ] not started; [~] in progress; [x] complete.
 
 - [x] Review the deployed storefront and its React repository.
 - [x] Import five optimized storefront screenshots (cover plus four gallery views).
-- [x] Add Nueve as a featured full-stack-ready e-commerce case study.
+- [x] Add Nueve as a full-stack-ready e-commerce case study.
 - [x] Document catalog, product, cart, promotion, checkout, profile and order flows.
 - [x] Connect the source repository and Netlify live project.
 - [x] Verify six-project routing, filters, screenshots and links (59 browser checks); save checkpoint `v0.1.2`.
+
+## Selected-work layout follow-up — 2026-10-07
+
+- [x] Move Luminara and Nueve to positions two and three.
+- [x] Present projects two–three and four–five as paired cards.
+- [x] Invert the sixth project with copy on the left and artwork on the right.
+- [x] Verify responsive ordering and layout (60 browser checks); save checkpoint `v0.1.3`.

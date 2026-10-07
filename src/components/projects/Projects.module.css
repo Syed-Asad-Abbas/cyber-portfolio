@@ -186,6 +186,13 @@
   border-bottom: 0;
   border-top: 1px solid var(--line);
 }
+.wide .visual {
+  grid-column: 2;
+}
+.wide .cardBody {
+  grid-column: 1;
+  grid-row: 1;
+}
 .wide .visual img {
   aspect-ratio: 1.9;
   object-fit: contain;
@@ -226,6 +233,11 @@
   .featured,
   .wide {
     display: block;
+  }
+  .wide .visual,
+  .wide .cardBody {
+    grid-column: auto;
+    grid-row: auto;
   }
   .featured {
     padding-bottom: 0;
